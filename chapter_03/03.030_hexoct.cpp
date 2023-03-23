@@ -1,11 +1,10 @@
 #include<iostream>
 
-
 int main(){
     using namespace std;
     int chest = 42;
     int inseam = 042;
-    int waist = 0x42;
+    int waist = 0x42;           // 0x/0X 表示16进制, x大小写一样
     // int a = 095; 这样表示有误, 无法确定基数
     
     cout << "Monsieur cuts a striking figure!\n";
