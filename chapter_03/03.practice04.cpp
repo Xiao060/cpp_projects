@@ -5,7 +5,8 @@ int main(){
     const int Hour_per_day = 24;
     const int Min_per_hour = 60;
     const int Sec_per_min = 60;
-    int s, day, hour, min, sec;
+    long s; 
+    int day, hour, min, sec;
 
     cout << "Enter the number of seconds: ";
     cin >> s;
