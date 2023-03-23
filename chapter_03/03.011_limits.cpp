@@ -10,12 +10,12 @@ int main(){
     long n_long = LONG_MAX;
     long long n_llong = LLONG_MAX;
 
-    // 对类型名使用 sizeof 应放于括号内, 见1
-    cout << "char is " << sizeof(char) << " bytes." << endl;
-    cout << "short is " << sizeof(short) << " bytes." << endl;
-    cout << "int is " << sizeof(int) << " bytes." << endl;
-    cout << "long is " << sizeof(long) << " bytes." << endl;
-    cout << "long long is " << sizeof(long long) << " bytes." << endl;
+    // 对变量名使用 sizeof 括号可选
+    cout << "char is " << sizeof(n_char) << " bytes." << endl;
+    cout << "short is " << sizeof n_short << " bytes." << endl;
+    cout << "int is " << sizeof n_int << " bytes." << endl;
+    cout << "long is " << sizeof n_long << " bytes." << endl;
+    cout << "long long is " << sizeof n_llong << " bytes." << endl;
 
     cout << "Maximum values:" << endl;
     cout << "char: " << n_char << endl;
