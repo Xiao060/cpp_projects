@@ -1,4 +1,4 @@
-#include<cstring>           // 包含
+#include<cstring>           // 包含 strcpy()/strcat()/strlen()函数
 #include<iostream>
 #include<string> 
 /*
