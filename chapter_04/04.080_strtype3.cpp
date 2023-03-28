@@ -1,6 +1,13 @@
+#include<cstring>           // 包含
 #include<iostream>
-#include<string>
-#include<cstring>
+#include<string> 
+/*
+注意:iostream里已经包含了string; 
+srd::istream/std::ostream -> std::ios_base -> 
+getloc() -> std::locale -> name() -> std::string
+但是,为了使用时更加直接方便,建议重新导入覆盖掉上述路径
+*/          
+
 
 int main(){
     using namespace std;
