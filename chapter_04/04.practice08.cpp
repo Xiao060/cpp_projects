@@ -18,7 +18,7 @@ int main(){
     // cin 跳过空白字符从第一个与类型匹配的项 读取到 最后一个匹配的项 结束, 
     // 其余东西保存在输入流中
     // 故读取半径后输入流里的第一项为 \n, 需要使用 cin.get() 跳过这个换行符
-    cin.get();                  
+    //cin.get();                  
     cout << "Enter the name of pizza company: ";
     getline(cin, pizza->name);
     cout << "Enter the weight of pizza: ";

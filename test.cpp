@@ -59,7 +59,7 @@ int main(){
     testname2.b = 12.5;
     cout << testname2.b << endl;
     */
-
+    /*
     int m[] = {1, 2, 3, 4, 5, 6, 7, 8};
 
     int* p = m;
@@ -69,7 +69,29 @@ int main(){
     // cout << p << endl;
     cout << *p++ << endl;
     cout << m[0] << endl;
-    cout << *p << endl;
+    cout << *p << endl;*/
+
+    // string m;
+
+    // cin >> m;
+    // getline(cin, m);
+    int x;
+    char m[20];
+    //char n;
+    //string y;
+    
+    //
+    cin >> x;
+    // getline(cin, y);
+    //cin >> m;
+    cin.get(m, 20);
+    //cin.getline(m, 20);
+    //cin >> n;
+    //cin >> y;
+    cout << x << "; " << strlen(m) << endl; 
+    cout << int (m[0]) << endl;
+
+
 
 
     return 0;
