@@ -47,6 +47,8 @@ int main(){
     cout << y << endl;
     cout << strlen(x) << endl;
     */
+
+   /*
    testname1.a = 1;
    testname1.b = 2;
 
@@ -56,6 +58,18 @@ int main(){
     testname2.a = 12;
     testname2.b = 12.5;
     cout << testname2.b << endl;
+    */
+
+    int m[] = {1, 2, 3, 4, 5, 6, 7, 8};
+
+    int* p = m;
+
+    cout << p << endl;
+    // cout << *(++p) << endl;
+    // cout << p << endl;
+    cout << *p++ << endl;
+    cout << m[0] << endl;
+    cout << *p << endl;
 
 
     return 0;
