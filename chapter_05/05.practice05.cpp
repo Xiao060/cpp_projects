@@ -31,7 +31,7 @@ int main(){
         sum += num[i];
     }
 
-    cout << "The sum of books to sell is " << sum << endl;
+    cout << "The sum of books to sell is " << sum << endl; 
 
     return 0;
 }
