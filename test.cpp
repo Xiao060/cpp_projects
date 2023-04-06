@@ -61,10 +61,11 @@ int main(){
 
 
     //cout << 'a'*5 << endl;
+    
 
-
-
-
+    int m;
+    cout << bool (cin >> m);
+    
 
     return 0;
 }
