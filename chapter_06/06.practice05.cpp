@@ -11,7 +11,8 @@ int main(){
     while (cin >> money && money >= 0){
         if (money <= 5000)
             interest = 0;
-        else if (money >= 5001 && money <= 15000)
+        // 后续判断只需写 money <= ... 即可
+        else if (money >= 5001 && money <= 15000)   
             interest = (money-5000)*0.10;
         else if (money >= 15001 && money <= 35000)
             interest = 10000*0.10 + (money-15000)*0.15;

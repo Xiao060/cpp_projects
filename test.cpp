@@ -63,8 +63,10 @@ int main(){
     //cout << 'a'*5 << endl;
     
 
-    int m;
-    cout << bool (cin >> m);
+    string str;
+
+    cout << "输入test: ";
+    getline
     
 
     return 0;
