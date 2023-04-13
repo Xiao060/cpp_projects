@@ -12,7 +12,7 @@ int main(){
 
     while (cin >> str && str != "q"){
         if (isalpha(str[0])){
-            switch (str[0]){
+            switch (tolower(str[0])){
                 case 'a' :            
                 case 'e' :
                 case 'i' :
