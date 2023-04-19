@@ -63,10 +63,16 @@ int main(){
     //cout << 'a'*5 << endl;
     
 
-    string str;
+    /*string str;
 
     cout << "输入test: ";
-    getline
+    getline*/
+
+    int a = 20;
+    int* p = &a;
+
+    cout << p << endl;
+    //cout << a << endl;
     
 
     return 0;
