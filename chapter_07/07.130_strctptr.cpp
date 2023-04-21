@@ -24,7 +24,7 @@ int main(){
     while (cin >> rplace.x >> rplace.y){
         rect_to_polor(&rplace, &pplace);
         show_polor(&pplace);
-        cout << "Next two numbers (q to quit): ";
+        cout << "Next two numbers (q to quit): ";   
     }
 
     return 0;
