@@ -2,6 +2,7 @@
 #include<cstring>
 #include<string>
 
+
 struct testType1{
     int a;
     int b;
@@ -13,12 +14,15 @@ union testType2{
 }testname2;
 
 
+int test1(int n);
+int test2(int m, int (*x)(int));
+
+using namespace std;
 
 
 
 
 int main(){
-    using namespace std;
 
     /*
     char m[10] = "1248";            //{'1', '2', '5', '\0'};
@@ -68,12 +72,31 @@ int main(){
     cout << "输入test: ";
     getline*/
 
-    int a = 20;
+    /*int a = 20;
     int* p = &a;
 
-    cout << p << endl;
+    cout << p << endl;*/
     //cout << a << endl;
+
+
+    test2(5, test1);
     
 
+    return 0;
+}
+
+
+
+int test1(int n){
+    cout << "The number  of you entered is " << n << endl;
+    return 0;
+}
+
+int test2(int m, int (*x)(int)){
+    // 以下两种通过函数指针调用函数的方式均可以
+    // 第 1 种, 函数指针解除引用
+    (*x)(m);            
+    // 第 2 种, 因为函数名代表的就是函数指针, 故直接用函数指针代替函数名
+    x(m);               
     return 0;
 }
