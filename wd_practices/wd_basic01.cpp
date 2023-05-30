@@ -9,7 +9,7 @@ int main(){
 
     if (x < 5)
         cout << x << endl;
-    else if (5 <= x < 15)
+    else if (5 <= x && x < 15)
         cout << x+6 << endl;
     else
         cout << x-6; 
