@@ -12,12 +12,12 @@ int main(){
     for (int i=0; i<size; ++i)
         cin >> num[i];
 
-    int pre=0, pos=size-1;
+    int p=0, q=size-1;
     int temp;
-    for (; pre < pos; ++pre, --pos){
-        temp = num[pre];
-        num[pre] = num[pos];
-        num[pos] = temp;
+    for (; p < q; ++p, --q){
+        temp = num[p];
+        num[p] = num[q];
+        num[q] = temp;
     }
 
     for (int i=0; i<size; ++i)
