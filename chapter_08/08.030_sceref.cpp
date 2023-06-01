@@ -17,7 +17,7 @@ int main(){
 
     cout << "bunnies = " << bunnies << endl
          << "rats = " << rats << endl
-         << "rodents" << rodents << endl;
+         << "rodents = " << rodents << endl;
 
     cout << "bunnies address = " << &bunnies << endl
          << "rodents address = " << &rodents << endl;
