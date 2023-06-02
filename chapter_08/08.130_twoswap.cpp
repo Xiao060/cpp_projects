@@ -11,8 +11,13 @@ struct job{
 template <typename T>
 void Swap(T &a, T &b);
 
-template <> 
+template <>                             //  显示具体化
 void Swap<job>(job &j1, job &j2);
+// 此处 <job> 可以省略, 写成
+/*
+template <>
+void Swap(job &j1, job &j2);
+*/
 
 void Show(job &j);
 
