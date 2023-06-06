@@ -7,8 +7,8 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "*.cpp",
-                //"${file}",
+                "*.cpp", 
+                //"${file}", //此处是为了满足多文件编译需要进行的修改
                 "-o",
                 "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
             ],
