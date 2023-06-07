@@ -44,17 +44,11 @@
         "typeinfo": "cpp"
     },
     "code-runner.executorMap": {
-
-
-
-
-
-
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "zig": "zig run",
-        "cpp": "cd $dir && g++ -fexec-charset=GBK $fileName -o $workspaceRoot/build/$fileNameWithoutExt.exe && $workspaceRoot/build/$fileNameWithoutExt ", 
+        "cpp": "clear && cd $dir && g++ -fexec-charset=GBK $fileName -o $workspaceRoot/build/$fileNameWithoutExt.exe && $workspaceRoot/build/$fileNameWithoutExt ", 
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
         "python": "python -u",

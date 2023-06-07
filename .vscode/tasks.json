@@ -1,4 +1,4 @@
-{
+{  
     "tasks": [
         {
             "type": "cppbuild",
@@ -13,7 +13,7 @@
                 "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${fileDirname}",
             },
             "problemMatcher": [
                 "$gcc"

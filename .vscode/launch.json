@@ -11,6 +11,7 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
+            // 没用 // "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi",
             "miDebuggerPath": "D:\\Software\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
                 {
