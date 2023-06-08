@@ -1,8 +1,7 @@
 #include<iostream>
 #include "10.070_stock20.h"
 
-// 因为头文件中引入了 std, 此处不必在引入, 否则会产生混淆
-// using namespace std;
+using namespace std;
 const int STKS = 4;
 
 int main(){
