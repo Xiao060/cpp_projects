@@ -45,9 +45,27 @@ void Stock::update(double price){
     set_tot();
 }
 
+/*
 void Stock::show(){
     cout << "Company: " << company
          << "\n Shares: " << shares 
          << "\n Share Price: $" << share_val
          << "\n Total Worth: $" << total_val << endl;
+}
+*/
+
+void Stock::show(){
+    // 存储输出的格式信息
+    ios_base::fmtflags orig = cout.setf(ios_base::fixed, ios_base::floatfield);
+
+    streamsize prec = cout.precision(3);
+    cout << "Company: " << company
+         << "\n Shares: " << shares 
+         << "\n Share Price: $" << share_val;
+    
+    cout.precision(2); 
+    cout << "\n Total Worth: $" << total_val << endl;
+
+    cout.setf(orig, ios_base::floatfield);
+    cout.precision(prec);
 }
