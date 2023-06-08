@@ -11,6 +11,7 @@ class Time{
         void AddMin(int m);
         void AddHr(int h);
         void Reset(int h=0, int m=0);
+        // 返回值为 Time 类, 而不是引用, 详见函数定义
         Time Sum(const Time & t) const;
         void Show() const;
 };

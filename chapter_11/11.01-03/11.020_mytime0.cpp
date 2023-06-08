@@ -27,6 +27,9 @@ void Time::Reset(int h, int m){
     minutes = m;
 }
 
+// 返回值为 Time 类, 而不是引用
+// 因为函数内创建的 sum 对象是一个临时变量, 函数运行结束后, 临时变量会释放, 返回引用得到的是一个空值
+// 返回 Time 类 会把 sum 对象复制到另一个 Time 对象中, 然后才释放 sum 对象
 Time Time::Sum(const Time & t) const {
     Time sum;
     sum.minutes = minutes + t.minutes;
