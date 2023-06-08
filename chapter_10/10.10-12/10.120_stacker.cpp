@@ -13,12 +13,15 @@ int main(){
          << "P to process a PO, or Q to quit.\n";
         
     while (cin >> ch && toupper(ch) != 'Q'){
+        // 将 输入行 中的 其他字母 丢弃
         while (cin.get() != '\n')
             continue;
+
         if (!isalpha(ch)){
             cout << '\a';
             continue;
         }
+
         switch (ch){
             case 'A':
             case 'a':   cout << "Enter a PO number to add: ";
