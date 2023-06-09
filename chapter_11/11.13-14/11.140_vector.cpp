@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// cmath 库中的函数 角 都是用 弧度 表示的
+
 namespace VECTOR{
     // 值为 57.295..
     const double Rad_to_deg = 45.0 / atan(1.0);
@@ -36,14 +38,14 @@ namespace VECTOR{
 
     Vector::Vector(double n1, double n2, Mode form){
         mode = form;
-        if (form = RECT){
+        if (form == RECT){
             x = n1;
             y = n2;
             set_mag();
             set_ang();
-        }else if (form = POL){
+        }else if (form == POL){
             mag = n1;
-            ang = n2;
+            ang = n2 / Rad_to_deg;
             set_x();
             set_y();
         }else{
@@ -64,7 +66,7 @@ namespace VECTOR{
             set_ang();
         }else if (form == POL){
             mag = n1;
-            ang = n2;
+            ang = n2 / Rad_to_deg;
             set_x();
             set_y();
         }else{
@@ -82,12 +84,12 @@ namespace VECTOR{
         mode = RECT;
     }
 
-    Vector Vector::operator+(const Vector & t) const {
-        return Vector(x + t.x, y + t.y);
+    Vector Vector::operator+(const Vector & b) const {
+        return Vector(x + b.x, y + b.y);
     }
 
-    Vector Vector::operator-(const Vector & t) const {
-        return Vector(x - t.x, y - t.y);
+    Vector Vector::operator-(const Vector & b) const {
+        return Vector(x - b.x, y - b.y);
     }
 
     Vector Vector::operator-() const {
@@ -105,10 +107,11 @@ namespace VECTOR{
 
     // 友元函数调用 Vector 类属性, 需要用作用域运算符
     ostream & operator<<(ostream & os, const Vector & v){
+        // 因为该函数为 名称空间 内的友元函数, 所以使用Mode时, 需要用 Vector::RECT, 而不用再加 VECTOR::...::...
         if (v.mode == Vector::RECT)
             os << "(x, y) = (" << v.x << ", " << v.y << ")";
         else if (v.mode == Vector::POL)
-            os << "(m, a) = (" << v.mag << ", " << v.ang << ")";
+            os << "(m, a) = (" << v.mag << ", " << v.ang * Rad_to_deg << ")";
         else
             os << "Vector object mode is invalid";
         return os;

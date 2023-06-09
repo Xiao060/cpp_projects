@@ -23,10 +23,10 @@ namespace VECTOR{
             Vector();
             // 自定义构造函数
             Vector(double n1, double n2, Mode form = RECT);
+            void reset(double n1, double n2, Mode form=RECT);
             // 析构函数
             ~Vector();
-
-            void reset(double n1, double n2, Mode from=RECT);
+            
             // 4 个内联函数
             double xval() const { return x; }
             double yval() const { return y; }
@@ -37,9 +37,13 @@ namespace VECTOR{
             void rect_mode();
 
             Vector operator+(const Vector & b) const;
-            Vector operator-(const Vector & t) const;
+            Vector operator-(const Vector & b) const;
+            // 重载 - 运算符为一元运算符, 所以参数不需要填
+            // 该函数与上一个函数的特征标不同
             Vector operator-() const;
             Vector operator*(double n) const;
+
+            // 友元函数
             friend Vector operator*(double n, const Vector & a);
 
             friend ostream & operator<<(ostream & os, const Vector & v);
