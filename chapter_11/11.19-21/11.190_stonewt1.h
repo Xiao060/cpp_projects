@@ -14,6 +14,8 @@ class Stonewt{
         ~Stonewt();
         void show_lbs() const;
         void show_stn() const;
+        
+        // 类型转换函数
         operator int() const;
         operator double() const;
 };

@@ -30,6 +30,8 @@ void Stonewt::show_lbs() const {
     cout << pounds << " pounds\n";
 }
 
+
+// 类型转换函数
 Stonewt::operator int() const {
     return int (pounds + 0.5);
 }
@@ -37,3 +39,6 @@ Stonewt::operator int() const {
 Stonewt::operator double() const {
     return pounds;
 }
+
+// 上述 2 个类型转换函数能够实现 隐式类型转换, 但 隐式转换 有可能不问题
+// 故可以使用 explicit 将隐式转换关闭, 只能通过 显式 进行转换
