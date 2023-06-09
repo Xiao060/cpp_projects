@@ -14,6 +14,7 @@ int main(){
     cout << atan(1) << endl;
     cout << atan2(1, 1) << endl;
     cout << atan2(5, 3) << endl;
+    cout << 3.5 % 2;
     
 
     return 0;
