@@ -11,7 +11,9 @@ using namespace VECTOR;
 */ 
 
 int main(){
-    srand(time(0));
+    // rand() 根据种子生成数字, 要生成(伪)随机数字, 需要改变种子
+    // 此处以 1970.1.1.0 到现在的时间作为种子, 每次生成数字时种子不同
+    srand(time(0));     
     double direction;
     Vector step;                // 记录每一步的向量
     Vector result(0.0, 0.0);    // 记录走的总向量
