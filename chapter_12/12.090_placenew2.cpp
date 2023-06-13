@@ -19,7 +19,7 @@ class JustTesting{
 
         ~JustTesting(){
             cout << words << " destoryed\n";
-        };
+        }
 
         void Show() const {
             cout << words << ", " << number << endl;
@@ -31,12 +31,11 @@ int main(){
 
     JustTesting *pc1, *pc2;
 
-    // 定位 new 运算符, 在 buffer 数组中为 JustTesting 分配空间
     pc1 = new (buffer) JustTesting;
     pc2 = new JustTesting("Heap1", 20);
 
-    cout << "Memory block addresses:\n" 
-         << " buffer: " << (void *) buffer << endl 
+    cout << "Memory block addresses:\n"
+         << " buffer: " << (void *) buffer << endl
          << " heap: " << pc2 << endl;
 
     cout << "Memory contents:\n";
@@ -46,7 +45,7 @@ int main(){
     pc2->Show();
 
     JustTesting *pc3, *pc4;
-    pc3 = new (buffer) JustTesting("Bad Idea", 6);
+    pc3 = new (buffer + sizeof(JustTesting)) JustTesting("Better Idea", 6);
     pc4 = new JustTesting("Heap2", 10);
 
     cout << "Memory contents:\n";
@@ -57,9 +56,10 @@ int main(){
 
     delete pc2;
     delete pc4;
-
-    // 此处直接释放整个 buffer 空间, 但pc1/pc3 的析构函数不会执行
-    // 要仅删除 pc1/pc3 的空间, 需要显式调用它们的析构函数, 例: pc3->!JustTesting()
+    
+    // 显式调用析构函数释放空间
+    pc3->~JustTesting();
+    pc1->~JustTesting();
     delete [] buffer;
     cout << "Done\n";
 
