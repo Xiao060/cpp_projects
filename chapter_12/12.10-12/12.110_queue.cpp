@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// 常量要在对象创建前确定
+// 常量要在对象创建时确定
 Queue::Queue(int qs): qsize(qs) {
     // 传统C NULL; C++98 0; C++11 nullptr
     front = rear = NULL;
