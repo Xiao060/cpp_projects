@@ -3,8 +3,9 @@
 using namespace std;
 
 int main(){
-    double a;
     int b;
+    cin >> b;
+    cout << b%10;
 
     return 0;
 }
