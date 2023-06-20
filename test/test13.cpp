@@ -3,9 +3,8 @@
 using namespace std;
 
 int main(){
-
-    cout << "def";
-
+    double a;
+    int b;
 
     return 0;
 }
