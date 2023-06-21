@@ -9,7 +9,7 @@ class Shape{
 
     public:
         string type; 
-        virtual void square(){};
+        virtual void area(){};
 };
 
 class Rectangle : public Shape{
@@ -24,7 +24,7 @@ class Rectangle : public Shape{
             width = w;
         };
 
-        virtual void square(){
+        virtual void area(){
             cout << type << " : " << length * width << endl;
         }
 };
@@ -43,7 +43,7 @@ class Trapezoid : public Shape{
             height = h;
         }
 
-        virtual void square(){
+        virtual void area(){
             cout << type << " : " << (up_bottom + down_bottom) * height / 2 << endl;
         }
 };
@@ -58,7 +58,7 @@ class Circle : public Shape{
             radius = r;
         }
 
-        virtual void square(){
+        virtual void area(){
             cout << type << " : " << M_PI * radius * radius << endl;
         }
 };
@@ -68,13 +68,13 @@ class Circle : public Shape{
 int main(){
 
     Rectangle c(4, 7);
-    c.square();
+    c.area();
 
     Trapezoid t(2, 3, 5);
-    t.square();
+    t.area();
 
     Circle y(5);
-    y.square();
+    y.area();
 
     return 0;
 }
