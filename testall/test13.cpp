@@ -1,48 +1,47 @@
 #include<iostream>
+#include<string>
 
 using namespace std;
 
-struct LNode{
-    int data;
-    struct LNode * next;
+class Rectangle{
+    public:
+        double length;
+        double width;
+        string type;
+
+    private:
+        Rectangle();
+        Rectangle(double l, double w);
+        void square();
 };
 
-void show(LNode * h);
-void cz(LNode * h);
+Rectangle::Rectangle(){
+    type = "长方形";
+    length = 0.0;
+    width = 0.0;
+}
+
+Rectangle::Rectangle(double l, double w){
+    type = "长方形";
+    length = l;
+    width = w;
+}
+
+
+void Rectangle::square(){
+    cout << type << " : " << length * width;
+}
 
 
 int main(){
-    LNode * a = new LNode;
-    LNode * b = new LNode;
-    LNode * c = new LNode;
+        Rectangle x(4.0, 5.0);
 
-    b->data = 12;
-    a->next = b;
-    c->data = 13;
-    b->next = c;
-    c->next = NULL;
 
-    show(a);
 
     return 0;
 }
 
-void cz(LNode * h){
-    LNode *p, *q;
-    p = h;
-    int x;
 
-    cout << "请输入: ";
-    while (cin >> x){
-        q = new LNode;
-        q->data = x;
-        q->next = nullptr;
-        p->next = q;
-        p = q;
-    }
-}
-
-void show(LNode * h){
     LNode * p = h->next;
 
     while (p){
